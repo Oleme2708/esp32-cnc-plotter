@@ -49,7 +49,7 @@ G-code file
      v
 Universal Gcode Sender (UGS)
      |
-     | USB / Serial
+     USB / Serial
      v
 ESP32 + Grbl_ESP32
      |
@@ -150,7 +150,7 @@ firmware/esp32_cnc_plotter_config.h
 The configuration enables unipolar motor control and assigns four ESP32 GPIO pins to each motor.
 
 
-# ESP32 pin configuration
+# ESP32 pin configuration 
 
 ## X axis
 
@@ -178,6 +178,9 @@ The configuration enables unipolar motor control and assigns four ESP32 GPIO pin
 | Phase 1 | GPIO 27 |
 | Phase 2 | GPIO 13 |
 | Phase 3 | GPIO 23 |
+
+# Wiring diagram
+![Alt text](images/wiring_diagram.png)
 
 # Axis direction
 
@@ -211,21 +214,6 @@ Paper horizontal direction = Machine Y axis
 
 This orientation has to be considered when generating G-code.
 
-# Power
-
-The three stepper motors are powered using an external regulated 5V supply.
-
-The ESP32 and all ULN2003 motor drivers share a common ground.
-
-```text
-External 5V +  ----> ULN2003 VCC
-
-External GND   ----> ULN2003 GND
-                        |
-ESP32 GND -------------+
-```
-
-The stepper motors are not powered directly from an ESP32 GPIO pin.
 
 # G-code
 
@@ -334,10 +322,10 @@ F300
 
 If a motor begins to:
 
-+ vibrate without moving,
-+ lose steps,
-+ make abnormal sounds,
-+ or fail to return to the original position,
++ vibrate without moving
++ lose steps
++ make abnormal sounds
++ fail to return to the original position
 
 the feed rate should be reduced.
 
