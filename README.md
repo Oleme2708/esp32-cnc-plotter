@@ -23,19 +23,12 @@ I also designed two additional washer parts because the screws available to me d
 
 # Demo
 
-Demo photo and video will be added after final testing.
+![Alt text](images/assembly_image.jpg)
 
-<!--
-Add final image here:
+[![CNC Plotter Demo](images/demo1_gif.gif)](demo_vid/demo_1.mp4)
 
-![ESP32 CNC Plotter](media/cnc_plotter.jpg)
--->
+[![CNC Plotter Demo](images/demo2_gif.gif)](demo_vid/demo_2.mp4)
 
-<!--
-Add demo video here:
-
-[Watch demo video](YOUR_VIDEO_LINK)
--->
 
 # Project overview
 
@@ -151,7 +144,7 @@ The configuration enables unipolar motor control and assigns four ESP32 GPIO pin
 
 
 # ESP32 pin configuration 
-
+These pin are wired this way to avoid important pin that cause error
 ## X axis
 
 | Motor phase | ESP32 GPIO |
