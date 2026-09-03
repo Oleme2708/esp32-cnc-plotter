@@ -144,7 +144,7 @@ The configuration enables unipolar motor control and assigns four ESP32 GPIO pin
 
 
 # ESP32 pin configuration 
-These pin are wired this way to avoid important pin that cause error
+These pin are wired this way to avoid important pins that might cause error
 ## X axis
 
 | Motor phase | ESP32 GPIO |
@@ -399,7 +399,8 @@ Platform:
 
 **MakerWorld / Bambu Studio Online Models**
 
-> TODO: paste the exact MakerWorld model URL here.
+> https://makerworld.com/en/models/2889145-simple-arduino-cnc-plotter?from=search#profileId-3227843
+
 
 The plotter is designed so that almost the complete mechanical structure can be produced using a 3D printer.
 
@@ -445,11 +446,10 @@ CAD/Simple_CNC_Plotter.3mf
 
 # Errors and lesson learned
 
-+ **Motor appeared not to move:** the feed rate was too low, so the motor was moving extremely slowly rather than being completely stopped.
-
-+ **Y axis did not move:** the ULN2003 driver board power connection was disconnected. Checking the driver power fixed the issue.
-
-+ **Z axis vibrated instead of moving:** faulty jumper wires caused unreliable motor phase signals. Replacing the wires restored normal movement.
++ **Motor appeared not to move or vibrating:** 
+the feed rate was too low, so the motor was moving extremely slowly rather than being completely stopped.
+the ULN2003 driver board power connection was disconnected. Checking the driver power fixed the issue.
+faulty jumper wires caused unreliable motor phase signals. Replacing the wires restored normal movement.
 
 + **Motor moved correctly in one direction but vibrated in reverse:** one motor phase connection was unreliable.
 
@@ -470,7 +470,6 @@ CAD/Simple_CNC_Plotter.3mf
 # Current limitations
 
 + No limit switches
-+ No automatic homing
 + Open-loop stepper control with no position feedback
 + Lightweight 3D-printed frame can move during operation
 + Pen pressure can vary with mechanical alignment
@@ -481,7 +480,6 @@ CAD/Simple_CNC_Plotter.3mf
 + Add a spring-loaded or floating pen holder
 + Fix the machine to a more rigid base
 + Add limit switches
-+ Add automatic homing
 + Improve cable management
 + Improve mechanical rigidity
 + Perform more accurate X/Y calibration
@@ -497,7 +495,8 @@ CAD/Simple_CNC_Plotter.3mf
 Designer: **DonTheMaker**  
 Platform: **MakerWorld**
 
-> TODO: add the exact original model link before the final portfolio version.
+> https://makerworld.com/en/models/2889145-simple-arduino-cnc-plotter?from=search#profileId-3227843
+
 
 ## Grbl_ESP32
 
